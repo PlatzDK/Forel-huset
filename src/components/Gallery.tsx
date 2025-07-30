@@ -42,6 +42,10 @@ const Gallery: React.FC = () => {
     {
       src: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       alt: "Fresh fish prepared for cooking"
+    },
+    {
+      src: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      alt: "Beautiful sunset view from the house"
     }
   ];
 

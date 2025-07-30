@@ -38,7 +38,7 @@ const translations = {
     
     // Gallery
     'gallery.title': 'Galleri',
-    'gallery.subtitle': 'Se hvordan dit perfekte fiskeeventyr ser ud',
+    'gallery.subtitle': 'Oplev vores smukke sommerhus og fantastiske omgivelser',
     
     // Activities
     'activities.title': 'Oplevelser & Aktiviteter',
