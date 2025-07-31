@@ -3,7 +3,10 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, content } = useLanguage();
+  const contactData = content.contact;
+  const footerData = content.footer;
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,10 +35,10 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-            {t('contact.title')}
+            {contactData.title[language]}
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            {t('contact.subtitle')}
+            {contactData.subtitle[language]}
           </p>
         </div>
 
@@ -43,7 +46,7 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-semibold text-slate-800 mb-6">
-              {t('footer.contact')}
+              {footerData.contact[language]}
             </h3>
             
             <div className="space-y-6">
@@ -53,7 +56,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800 mb-1">Adresse</h4>
-                  <p className="text-slate-600">{t('footer.address')}</p>
+                  <p className="text-slate-600">{footerData.address[language]}</p>
                 </div>
               </div>
 
@@ -62,9 +65,9 @@ const Contact: React.FC = () => {
                   <Phone className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-800 mb-1">{t('contact.phone.label')}</h4>
+                  <h4 className="font-semibold text-slate-800 mb-1">{contactData.info.phoneLabel[language]}</h4>
                   <a href="tel:+4512345678" className="text-emerald-600 hover:text-emerald-700">
-                    {t('footer.phone')}
+                    {footerData.phone}
                   </a>
                 </div>
               </div>
@@ -74,9 +77,9 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-800 mb-1">{t('contact.email.label')}</h4>
+                  <h4 className="font-semibold text-slate-800 mb-1">{contactData.info.emailLabel[language]}</h4>
                   <a href="mailto:info@sommerhus-fiskeri.dk" className="text-emerald-600 hover:text-emerald-700">
-                    {t('footer.email')}
+                    {footerData.email}
                   </a>
                 </div>
               </div>
@@ -94,7 +97,7 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t('contact.name')}
+                    {contactData.form.name[language]}
                   </label>
                   <input
                     type="text"
@@ -108,7 +111,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t('contact.email')}
+                    {contactData.form.email[language]}
                   </label>
                   <input
                     type="email"
@@ -125,7 +128,7 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t('contact.phone')}
+                    {contactData.form.phone[language]}
                   </label>
                   <input
                     type="tel"
@@ -138,7 +141,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <label htmlFor="guests" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t('contact.guests')}
+                    {contactData.form.guests[language]}
                   </label>
                   <select
                     id="guests"
@@ -159,7 +162,7 @@ const Contact: React.FC = () => {
 
               <div className="mb-6">
                 <label htmlFor="dates" className="block text-sm font-medium text-slate-700 mb-2">
-                  {t('contact.dates')}
+                  {contactData.form.dates[language]}
                 </label>
                 <input
                   type="text"
@@ -174,7 +177,7 @@ const Contact: React.FC = () => {
 
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  {t('contact.message')}
+                  {contactData.form.message[language]}
                 </label>
                 <textarea
                   id="message"
@@ -191,7 +194,7 @@ const Contact: React.FC = () => {
                 className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Send className="h-5 w-5" />
-                <span>{t('contact.send')}</span>
+                <span>{contactData.form.send[language]}</span>
               </button>
             </form>
           </div>

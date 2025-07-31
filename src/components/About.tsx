@@ -3,25 +3,10 @@ import { Waves, Fish, Home } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, content } = useLanguage();
+  const aboutData = content.about;
 
-  const features = [
-    {
-      icon: Waves,
-      title: t('about.feature1'),
-      description: t('about.feature1.desc'),
-    },
-    {
-      icon: Fish,
-      title: t('about.feature2'),
-      description: t('about.feature2.desc'),
-    },
-    {
-      icon: Home,
-      title: t('about.feature3'),
-      description: t('about.feature3.desc'),
-    },
-  ];
+  const iconMap = [Waves, Fish, Home];
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -30,29 +15,32 @@ const About: React.FC = () => {
           {/* Text Content */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-6">
-              {t('about.title')}
+              {aboutData.title[language]}
             </h2>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              {t('about.description')}
+              {aboutData.description[language]}
             </p>
 
             {/* Features */}
             <div className="space-y-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <feature.icon className="h-6 w-6 text-emerald-600" />
+              {aboutData.features.map((feature, index) => {
+                const IconComponent = iconMap[index];
+                return (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+                      <IconComponent className="h-6 w-6 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                        {feature.title[language]}
+                      </h3>
+                      <p className="text-slate-600">
+                        {feature.description[language]}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-slate-800 mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-600">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 

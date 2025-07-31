@@ -2,7 +2,9 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, content } = useLanguage();
+  const heroData = content.hero;
+  const navData = content.navigation;
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center">
@@ -19,23 +21,23 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          {t('hero.title')}
+          {heroData.title[language]}
         </h1>
         <p className="text-xl sm:text-2xl mb-8 text-gray-100 leading-relaxed">
-          {t('hero.subtitle')}
+          {heroData.subtitle[language]}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            {t('hero.cta')}
+            {heroData.cta[language]}
           </a>
           <a
             href="#about"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white hover:bg-white hover:text-emerald-700 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            {t('nav.about')}
+            {navData.about[language]}
           </a>
         </div>
       </div>

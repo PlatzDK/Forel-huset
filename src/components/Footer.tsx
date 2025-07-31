@@ -3,7 +3,9 @@ import { Fish, Facebook, Instagram, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, content } = useLanguage();
+  const footerData = content.footer;
+  const aboutData = content.about;
 
   return (
     <footer className="bg-slate-800 text-white py-12">
@@ -16,23 +18,23 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">Sommerhus Fiskeri</span>
             </div>
             <p className="text-slate-300 leading-relaxed">
-              {t('about.description')}
+              {aboutData.description[language]}
             </p>
           </div>
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
+            <h3 className="text-lg font-semibold mb-4">{footerData.contact[language]}</h3>
             <div className="space-y-2 text-slate-300">
-              <p>{t('footer.address')}</p>
-              <p>{t('footer.phone')}</p>
-              <p>{t('footer.email')}</p>
+              <p>{footerData.address[language]}</p>
+              <p>{footerData.phone}</p>
+              <p>{footerData.email}</p>
             </div>
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.follow')}</h3>
+            <h3 className="text-lg font-semibold mb-4">{footerData.follow[language]}</h3>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -57,7 +59,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-          <p>{t('footer.copyright')}</p>
+          <p>{footerData.copyright[language]}</p>
         </div>
       </div>
     </footer>

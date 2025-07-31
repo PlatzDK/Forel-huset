@@ -4,16 +4,19 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, content } = useLanguage();
+
+  const navData = content.navigation;
+  const footerData = content.footer;
 
   const menuItems = [
-    { key: 'nav.home', href: '#home' },
-    { key: 'nav.about', href: '#about' },
-    { key: 'nav.gallery', href: '#gallery' },
-    { key: 'nav.activities', href: '#activities' },
-    { key: 'nav.testimonials', href: '#testimonials' },
-    { key: 'nav.faq', href: '#faq' },
-    { key: 'nav.contact', href: '#contact' },
+    { key: 'home', href: '#home' },
+    { key: 'about', href: '#about' },
+    { key: 'gallery', href: '#gallery' },
+    { key: 'activities', href: '#activities' },
+    { key: 'testimonials', href: '#testimonials' },
+    { key: 'faq', href: '#faq' },
+    { key: 'contact', href: '#contact' },
   ];
 
   const languages = [
@@ -40,7 +43,7 @@ const Header: React.FC = () => {
                 href={item.href}
                 className="text-slate-600 hover:text-emerald-600 transition-colors duration-200"
               >
-                {t(item.key)}
+                {navData[item.key as keyof typeof navData][language]}
               </a>
             ))}
           </nav>
@@ -49,11 +52,11 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4 text-slate-500" />
-              <span className="text-sm text-slate-600">+45 12 34 56 78</span>
+              <span className="text-sm text-slate-600">{footerData.phone}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-slate-500" />
-              <span className="text-sm text-slate-600">info@sommerhus-fiskeri.dk</span>
+              <span className="text-sm text-slate-600">{footerData.email}</span>
             </div>
             <select
               value={language}
@@ -88,17 +91,17 @@ const Header: React.FC = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="text-slate-600 hover:text-emerald-600 transition-colors duration-200"
                 >
-                  {t(item.key)}
+                  {navData[item.key as keyof typeof navData][language]}
                 </a>
               ))}
               <div className="pt-4 border-t border-slate-200">
                 <div className="flex items-center space-x-2 mb-2">
                   <Phone className="h-4 w-4 text-slate-500" />
-                  <span className="text-sm text-slate-600">+45 12 34 56 78</span>
+                  <span className="text-sm text-slate-600">{footerData.phone}</span>
                 </div>
                 <div className="flex items-center space-x-2 mb-4">
                   <Mail className="h-4 w-4 text-slate-500" />
-                  <span className="text-sm text-slate-600">info@sommerhus-fiskeri.dk</span>
+                  <span className="text-sm text-slate-600">{footerData.email}</span>
                 </div>
                 <select
                   value={language}
