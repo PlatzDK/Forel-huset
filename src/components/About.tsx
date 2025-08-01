@@ -48,24 +48,24 @@ const About: React.FC = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img
-                src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/images/house/exterior-1.jpg"
                 alt="Cozy summer house exterior"
                 className="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
               <img
-                src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+                src="/images/house/jetty.jpg"
                 alt="Wooden jetty on lake"
                 className="rounded-lg shadow-lg w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
-                src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+                src="/images/house/interior-1.jpg"
                 alt="Interior of summer house"
                 className="rounded-lg shadow-lg w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
               />
               <img
-                src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/images/house/fishing-scene.jpg"
                 alt="Fisherman with catch"
                 className="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />

@@ -136,7 +136,7 @@ export const siteContent = {
     },
     images: [
       {
-        src: "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/house-exterior.jpg",
         alt: {
           da: "Sommerhus udendørs udsigt",
           en: "Summer house exterior view",
@@ -144,7 +144,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/wooden-jetty.jpg",
         alt: {
           da: "Træmole på rolig sø",
           en: "Wooden jetty on calm lake",
@@ -152,7 +152,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/living-room.jpg",
         alt: {
           da: "Hyggelig indretning stue",
           en: "Cozy interior living room",
@@ -160,7 +160,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/fishing-catch.jpg",
         alt: {
           da: "Succesfuld fiskefangst",
           en: "Successful fishing catch",
@@ -168,7 +168,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/sunset-lake.jpg",
         alt: {
           da: "Solnedgang over sø med mole",
           en: "Sunset over lake with jetty",
@@ -176,7 +176,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/kitchen-dining.jpg",
         alt: {
           da: "Køkken og spiseplads",
           en: "Kitchen and dining area",
@@ -184,7 +184,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/bedroom.jpg",
         alt: {
           da: "Soveværelse med udsigt",
           en: "Bedroom with view",
@@ -192,7 +192,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1230302/pexels-photo-1230302.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/terrace.jpg",
         alt: {
           da: "Udendørs terrasse område",
           en: "Outdoor terrace area",
@@ -200,7 +200,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/fresh-fish.jpg",
         alt: {
           da: "Frisk fisk klar til tilberedning",
           en: "Fresh fish prepared for cooking",
@@ -208,7 +208,7 @@ export const siteContent = {
         }
       },
       {
-        src: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/images/gallery/evening-view.jpg",
         alt: {
           da: "Smuk solnedgang fra huset",
           en: "Beautiful sunset view from the house",
@@ -237,7 +237,7 @@ export const siteContent = {
           en: 'Fantastic fishing opportunities with pike, perch and zander. Perfect both from boat and shore.',
           de: 'Fantastische Angelmöglichkeiten mit Hecht, Barsch und Zander. Perfekt sowohl vom Boot als auch vom Ufer.'
         },
-        image: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image: "/images/activities/fishing.jpg"
       },
       {
         title: {
@@ -250,7 +250,7 @@ export const siteContent = {
           en: 'Explore the beautiful forests and trails around the house. Perfect for birdwatching and hiking.',
           de: 'Erkunden Sie die schönen Wälder und Wanderwege rund um das Haus. Perfekt für Vogelbeobachtung und Wandern.'
         },
-        image: "https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image: "/images/activities/nature.jpg"
       },
       {
         title: {
@@ -263,7 +263,7 @@ export const siteContent = {
           en: 'Enjoy the peace by the water, barbecue on the terrace or just relax in the peaceful atmosphere.',
           de: 'Genießen Sie die Ruhe am Wasser, grillen Sie auf der Terrasse oder entspannen Sie einfach in der friedlichen Atmosphäre.'
         },
-        image: "https://images.pexels.com/photos/1230302/pexels-photo-1230302.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image: "/images/activities/relaxation.jpg"
       }
     ] as ActivityItem[]
   },
@@ -288,7 +288,7 @@ export const siteContent = {
           de: 'Hans M., Deutschland'
         },
         rating: 5,
-        image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+        image: "/images/testimonials/hans.jpg"
       },
       {
         text: {
@@ -302,7 +302,7 @@ export const siteContent = {
           de: 'Sarah L., England'
         },
         rating: 5,
-        image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+        image: "/images/testimonials/sarah.jpg"
       },
       {
         text: {
@@ -316,7 +316,7 @@ export const siteContent = {
           de: 'Lars P., Dänemark'
         },
         rating: 5,
-        image: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+        image: "/images/testimonials/lars.jpg"
       }
     ] as TestimonialItem[]
   },
